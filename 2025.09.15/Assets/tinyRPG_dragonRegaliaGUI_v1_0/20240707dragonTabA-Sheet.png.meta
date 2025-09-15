@@ -43,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -135,13 +135,13 @@ TextureImporter:
       name: 20240707dragonTabA-Sheet_0
       rect:
         serializedVersion: 2
-        x: 5
+        x: 6
         y: 0
-        width: 30
+        width: 28
         height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 7, y: 6, z: 9, w: 8}
       customData: 
       outline: []
       physicsShape: []
@@ -157,13 +157,13 @@ TextureImporter:
       name: 20240707dragonTabA-Sheet_1
       rect:
         serializedVersion: 2
-        x: 44
+        x: 45
         y: 0
-        width: 72
+        width: 33
         height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 8, y: 7, z: 9, w: 8}
       customData: 
       outline: []
       physicsShape: []
@@ -184,7 +184,7 @@ TextureImporter:
         width: 28
         height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -201,7 +201,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 0002b9baa64e1ad47bb4083580713231
     internalID: 0
     vertices: []
     indices: 
@@ -210,7 +210,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      20240707dragonTabA-Sheet_0: -1272986484444413495
+      20240707dragonTabA-Sheet_1: 6500050073570041699
+      20240707dragonTabA-Sheet_2: -6946343470111640390
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
