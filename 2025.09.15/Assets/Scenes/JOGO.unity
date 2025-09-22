@@ -466,6 +466,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2297393824008145805, guid: 1a5ace8b0c6d0e64483a5e8d14a5320b, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2297393824008145805, guid: 1a5ace8b0c6d0e64483a5e8d14a5320b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2297393824008145805, guid: 1a5ace8b0c6d0e64483a5e8d14a5320b, type: 3}
+      propertyPath: m_MaskInteraction
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3159626029746297690, guid: 1a5ace8b0c6d0e64483a5e8d14a5320b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.7
@@ -476,7 +488,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3159626029746297690, guid: 1a5ace8b0c6d0e64483a5e8d14a5320b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.13
       objectReference: {fileID: 0}
     - target: {fileID: 3159626029746297690, guid: 1a5ace8b0c6d0e64483a5e8d14a5320b, type: 3}
       propertyPath: m_LocalRotation.w

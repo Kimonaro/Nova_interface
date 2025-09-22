@@ -41,9 +41,14 @@ public class Bala : MonoBehaviour
             //Causa dano ao inimigo
             int novaVida = collision.gameObject.GetComponent<Personagem>().getVida() - getDano();
             collision.gameObject.GetComponent<Personagem>().setVida(novaVida);
-            
+
         }
 
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
+        //destrtoi a bala apos a colisão
+            Destroy(gameObject);
     }
+    
 }
+
+

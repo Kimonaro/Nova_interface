@@ -5,27 +5,45 @@ public class Arma : MonoBehaviour
     public Transform SaidaDoTiro;
     public GameObject bala;
     public float intervaloDoDisparo = 0.5f;
-    private float tempoDisparo = 0;
     
+    private float tempoDoDisparo = 0;
+    private Camera camera;
+
+    public GameObject cursor;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        camera = Camera.main;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (tempoDisparo <= 0 && Input.GetKeyDown(KeyCode.Mouse0))
+        float camDis = camera.transform.position.y - transform.position.y;
+        
+        Vector3 mouse = camera.ScreenToWorldPoint (new Vector3 (Input.mousePosition.x, Input.mousePosition.y, camDis));
+
+        float AngleRad = Mathf.Atan2 (mouse.y - transform.position.y, mouse.x - transform.position.x);
+        float angle = (180 / Mathf.PI) * AngleRad;
+
+        transform.rotation =  Quaternion.AngleAxis( angle, Vector3.forward);
+       
+        Debug.Log("Angilo: "+angle);
+        
+        cursor.transform.position = new Vector3(mouse.x, mouse.y, cursor.transform.position.z);
+        
+        Debug.DrawLine(transform.position, mouse , Color.red);
+        
+        if (tempoDoDisparo <= 0 && Input.GetKeyDown(KeyCode.Mouse0))
         {
             Debug.Log("bala disparada");
-            GameObject bala = Instantiate(this.bala, SaidaDoTiro.position, SaidaDoTiro.rotation);
+            GameObject b = Instantiate (this.bala, SaidaDoTiro.position, SaidaDoTiro.rotation) as GameObject;
             
-            tempoDisparo = intervaloDoDisparo;
+            tempoDoDisparo = intervaloDoDisparo;
         }
-        if (tempoDisparo > 0)
+        if (tempoDoDisparo > 0)
         {
-            tempoDisparo -= Time.deltaTime;
+            tempoDoDisparo -= Time.deltaTime;
         }
     }
 }
