@@ -19,6 +19,16 @@ public class Arma : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (gameObject.transform.rotation.eulerAngles.y > -90 && gameObject.transform.rotation.eulerAngles.y < 90)
+        {
+            transform.localScale = new Vector3(1, 1, 1);
+        }
+
+        if (gameObject.transform.rotation.eulerAngles.y > 90 && gameObject.transform.rotation.eulerAngles.y < -90)
+        {
+            transform.localScale = new Vector3(1, -1, 1);
+        }
+        
         float camDis = camera.transform.position.y - transform.position.y;
         
         Vector3 mouse = camera.ScreenToWorldPoint (new Vector3 (Input.mousePosition.x, Input.mousePosition.y, camDis));

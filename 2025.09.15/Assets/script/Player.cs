@@ -2,15 +2,28 @@ using UnityEngine;
 
 public class Player : Personagem
 {
+    private SpriteRenderer sprit;
+
+    public Transform arma;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        sprit = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (arma.rotation.eulerAngles.z > -90 && arma.rotation.eulerAngles.z < 90)
+        {
+            sprit.flipX = false;
+        }
+
+        if (arma.rotation.eulerAngles.z > 90 && arma.rotation.eulerAngles.z < 270)
+        {
+            sprit.flipX = true;
+        }
+        
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             transform.position -= new Vector3(getVelocidade() * Time.deltaTime , 0, 0);

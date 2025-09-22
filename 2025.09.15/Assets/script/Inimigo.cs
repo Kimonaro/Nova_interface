@@ -6,6 +6,8 @@ public class Inimigo : Personagem
     [SerializeField] public Transform posicaoDoPlayer;
     [SerializeField] private int dano = 1;
 
+    private SpriteRenderer spriteRenderer;
+    
     public void setDano(int dano)
     {
         this.dano = dano;
@@ -20,6 +22,8 @@ public class Inimigo : Personagem
 // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        
         if (posicaoDoPlayer == null)
         {
            posicaoDoPlayer = GameObject.Find("Player").transform;
@@ -29,6 +33,16 @@ public class Inimigo : Personagem
     // Update is called once per frame
     void Update()
     {
+        if (posicaoDoPlayer.position.x - transform.position.x > 0)
+        {
+            spriteRenderer.flipX = true;
+        }
+        
+        if (posicaoDoPlayer.position.x - transform.position.x < 0)
+        {
+            spriteRenderer.flipX = true;
+        }
+        
         if (posicaoDoPlayer != null)
         {
             Debug.Log("Pocição do player");
