@@ -134,19 +134,6 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WindowsStoreApps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -273,12 +260,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      20240711dragonHorizontalCursorB-Sheet_0: 8835027894284467046
-      20240711dragonHorizontalCursorB-Sheet_1: 3391558807949844208
-      20240711dragonHorizontalCursorB-Sheet_2: -2422493887956392002
-      20240711dragonHorizontalCursorB-Sheet_3: -1149488310015665760
-      20240711dragonHorizontalCursorB-Sheet_4: -1119605306126325325
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
